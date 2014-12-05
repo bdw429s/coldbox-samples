@@ -1,6 +1,6 @@
 <p>
 	<h2>Look at the Tracer Messages below:</h2>
-	You can also do this by using the logger plugin.
+	They are being logged by LogBox.
 </p>
 
 <p><strong>Hello:</strong>  <cfoutput>#Event.getValue("firstname","No name Found")#</cfoutput> 
