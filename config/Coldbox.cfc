@@ -1,5 +1,4 @@
-<cfcomponent output="false">
-<cfscript>
+component {
 
 	// Configure ColdBox Application
 	function configure(){
@@ -15,6 +14,7 @@
 			reinitPassword			= "",
 			handlersIndexAutoReload = false,
 			configAutoReload		= false,
+			customErrorTemplate		= '/coldbox/system/includes/BugReport.cfm',
 			
 			//Implicit Events
 			defaultEvent			= "Samples.index",
@@ -31,7 +31,7 @@
 			coldboxURL = "http://coldbox.org",
 			blogURL = "http://blog.coldbox.org",
 			coldboxAPIURl = "http://coldbox.org/api",
-			trackerURL = "http://coldbox.assembla.com",
+			trackerURL = "https://ortussolutions.atlassian.net/browse/COLDBOX",
 			coldboxReaderApp = "applications/ColdBoxReader",
 			cfcGeneratorApp = "applications/cfcGenerator",
 			TransferApp = "applications/TransferSample",
@@ -46,14 +46,7 @@
 		
 		//Register interceptors as an array, we need order
 		interceptors = [
-			//Autowire
-			{class="coldbox.system.interceptors.Autowire",
-			 properties={}
-			},
-			//SES
-			{class="coldbox.system.interceptors.SES",
-			 properties={}
-			}
+			{ class="coldbox.system.interceptors.SES" }
 		];
 		
 		
@@ -65,6 +58,4 @@
 		};
 		
 	}
-
-</cfscript>
-</cfcomponent>
+}

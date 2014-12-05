@@ -1,6 +1,5 @@
-<cfset HTMLHelper = getPlugin("HTMLHelper")>
 <cfoutput>
-#HTMLHelper.docType()#
+#HTML.docType()#
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<title>ColdBox: A ColdFusion Framework : #getResource("samplesgallery")#</title>

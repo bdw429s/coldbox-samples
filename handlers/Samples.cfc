@@ -1,17 +1,16 @@
-<cfcomponent output="false">
+component {
+	property name="i18n" inject="i18n@cbi18n";
 	
-	<cffunction name="index" access="public" returntype="void" output="false">
-		<cfargument name="event" type="any">
-		<cfset event.setView("home")>
-	</cffunction>
+	function index() {
+		event.setView("home");
+	}
 
-	<cffunction name="doChangeLocale" access="public" returntype="void" output="false">
-		<cfargument name="event" type="any">
+	function doChangeLocale() {
 		
-		<!--- Change User Locale --->
-		<cfset getPlugin("i18n").setfwLocale(event.getValue("locale"))>
+		//  Change User Locale
+		i18n.setfwLocale( event.getValue( "locale" ) );
 		
-		<cfset setNextevent('samples')>
-	</cffunction>
+		setNextevent( 'samples' );
+	}
 
-</cfcomponent>
+}
