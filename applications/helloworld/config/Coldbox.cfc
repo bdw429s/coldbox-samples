@@ -29,12 +29,7 @@ component {
 			// otherwise the debugger module won't have been loaded yet.
 			{ class="#appMapping#.interceptors.LogBox" }
 		];
-	
-		//Layout Settings
-		layoutSettings = {
-			defaultLayout = "Layout.Main.cfm"
-		};
-	
+		
 	}
 
 }
