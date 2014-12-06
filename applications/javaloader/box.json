@@ -46,15 +46,13 @@
         
     ],
     "dependencies":{
-        "cbi18n":"1.0.0",
-        "coldbox-be":"4.0.0"
+        "cbjavaloader":"1.0.0"
     },
     "devDependencies":{
         
     },
     "installPaths":{
-        "cbi18n":"modules\\cbi18n",
-        "coldbox-be":"coldbox"
+        "cbjavaloader":"modules\\cbjavaloader"
     },
     "ignore":[
         

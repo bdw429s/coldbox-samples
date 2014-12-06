@@ -13,7 +13,7 @@ Description :
 	
 	So if you have refactored your framework, make sure it extends coldbox.
 ----------------------------------------------------------------------->
-<cfcomponent extends="coldbox.system.Coldbox" output="false">
+<cfcomponent extends="coldbox.system.BootStrap" output="false">
 
 	<!--- APPLICATION CFC PROPERTIES --->
 	<cfset this.name = hash(getCurrentTemplatePath())> 

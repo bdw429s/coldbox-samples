@@ -42,7 +42,7 @@ Optional Methods
 		// coldbox directives
 		coldbox = {
 			//Application Setup
-			appName 				= "Java Loader Exampl",
+			appName 				= "Java Loader Example",
 			eventName 				= "event",
 
 			//Development Settings
@@ -59,7 +59,7 @@ Optional Methods
 			//Error/Exception Handling
 			exceptionHandler		= "",
 			onInvalidEvent			= "",
-			customErrorTemplate		= "",
+			customErrorTemplate		= '/coldbox/system/includes/BugReport.cfm',
 
 			//Application Aspects
 			handlerCaching 			= true,
@@ -68,22 +68,35 @@ Optional Methods
 			flashURLPersistScope	= "session"
 		};
 
-		// custom settings
-		settings = {
-			javaloader_libpath="#controller.getAppRootPath()#/includes/"
-		};
 
-		//LogBox DSL
+		// JavaLoader settings
+		javaloader = {
+		    // The array paths to load
+		    loadPaths = ['#controller.getAppRootPath()#/includes/helloworld.jar'],
+		    // Load ColdFusion classes with loader
+		    loadColdFusionClassPath = false,
+		    // Attach a custom class loader as a parent
+		    parentClassLoader = "",
+		    // Directories that contain Java source code that are to be dynamically compiled
+		    sourceDirectories = [],
+		    // the directory to build the .jar file for dynamic compilation in, defaults to ./tmp
+		    compileDirectory = getDirectoryFromPath( getCurrentTemplatePath() ) & "model/javaloader/tmp",
+		    // Whether or not the source is trusted, i.e. it is going to change? Defaults to false, so changes will be recompiled and loaded
+		    trustedSource = false
+		};
+		
+
+/*		//LogBox DSL
 		logBox = {
 			// Define Appenders
 			appenders = {
-				coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" }
+				//coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" }
 			},
 			// Root Logger
 			root = { levelmax="INFO", appenders="*" },
 			// Implicit Level Categories
 			info = [ "coldbox.system" ]
-		};
+		};*/
 
 		//Layout Settings
 		layoutSettings = {
