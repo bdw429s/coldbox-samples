@@ -9,7 +9,6 @@
 	<cfelse>
 		<cfset variables.instance.qUsers = queryNew("id,username,password,name")>
 	</cfif>
-	<cfset variables.instance.hashType = "SHA">
 
 	<cffunction name="init" access="public" returntype="datastore" output="false">
 		<cfset parseXML()>
