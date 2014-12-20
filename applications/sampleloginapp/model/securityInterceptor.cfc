@@ -15,12 +15,11 @@ Description :
 <cfcomponent name="securityInterceptor"
 			 hint="This is a simple security interceptor"
 			 output="false">
-
+	
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 
 	<cffunction name="Configure" access="public" returntype="void" hint="This is the configuration method for your interceptors" output="false" >
 		<!--- Nothing --->
-
 	</cffunction>
 
 <!------------------------------------------- INTERCEPTION POINTS ------------------------------------------->
@@ -34,17 +33,22 @@ Description :
 		<cfscript>
 			var rc = Event.getCollection();
 			var loggingIn = false;
-			var oSession = getPlugin("SessionStorage");
+			var sessionStorage = getInstance( 'sessionStorage@cbstorages' );
+			var messageBox = getInstance( 'messagebox@cbmessagebox' );
 
 			//Are we logging In
-			if ( event.getCurrentEvent() eq "General.doLogin" )
+			if ( event.getCurrentEvent() eq "General.doLogin" ) {
 				loggingIn = true;
+			}
 
 			//Login Check
-			if ( (not oSession.exists("loggedin") or not oSession.getVar("loggedin") ) and not loggingIn ){
+			if ( (not sessionStorage.exists("loggedin") or not sessionStorage.getVar("loggedin") ) 
+					and not loggingIn ){
 				//Override the incoming event.
 				Event.overrideEvent("General.Login");
-				getPlugin("MessageBox").setMessage("warning", "Interceptor Says: Please log in first");
+				if( messageBox.isEmptyMessage() ) {
+					messageBox.warn("Interceptor Says: Please log in first");
+				}
 			}
 		</cfscript>
 	</cffunction>

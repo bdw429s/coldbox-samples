@@ -66,7 +66,7 @@ function configure(){
 		//Error/Exception Handling
 		exceptionHandler		= "",
 		onInvalidEvent			= "",
-		customErrorTemplate		= "",
+		customErrorTemplate		= "/coldbox/system/includes/BugReport.cfm",
 
 		//Application Aspects
 		handlerCaching 			= false,
@@ -88,14 +88,14 @@ function configure(){
 	logBox = {
 		// Define Appenders
 		appenders = {
-			coldboxTracer = { class="coldbox.system.logging.appenders.ColdboxTracerAppender" },
 			coldboxFile = {
-				class="coldbox.system.logging.appenders.AsyncRollingFileAppender",
+				class="coldbox.system.logging.appenders.RollingFileAppender",
 				properties={filePath="logs",
 				fileName=coldbox.appname,
 				autoExpand=true,
 				fileMaxSize=2000,
-				fileMaxArchives=2}
+				fileMaxArchives=2,
+				async=true}
 			}
 		},
 		// Root Logger
