@@ -3,7 +3,7 @@
 <!------------------------------------------- CONSTRUCTOR ------------------------------------------->
 
 	<cfset variables.instance = structnew()>
-	<cfset variables.instance.datastoreFile = Expandpath("model/users.xml.cfm")>
+	<cfset variables.instance.datastoreFile = Expandpath("models/users.xml.cfm")>
 	<cfif server.ColdFusion.ProductName eq "Coldfusion Server">
 		<cfset variables.instance.qUsers = queryNew("id,username,password,name","varchar,varchar,varchar,varchar")>
 	<cfelse>
