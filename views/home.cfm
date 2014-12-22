@@ -103,15 +103,7 @@
 				  #getresource("nosetup")# <br />
 				  <a href="applications/i18NSample/index.cfm" target="_blank">#getresource("opensample")#</a><br />
 				</p>
-				
-				<!--- Flex --->
-				<h3>ColdBox Flex Tester</h3>
-				<p> #getresource("by")# Luis Majano
-				  <br />
-				  #getresource("nosetup")# <br />
-				  <a href="applications/ColdboxFlexTester/bin/ColdboxFlexTester.html" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-				
+								
 				<!--- CFC Viewer --->
 				<h3>ColdBox cfcViewer Sample</h3>
 				<p> #getresource("by")# Luis Majano
