@@ -135,44 +135,7 @@
 				  <a href="#getSetting("ColdboxReaderApp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
 				  <a href="#getSetting("ColdboxReaderApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
 				</p>
-				
-				<!--- Transfer Sample --->
-				<h3>Transfer Sample</h3>
-				<p> #getresource("by")# Luis Majano<br />#getresource("transfermessage")#<bR>
-				#getresource("needssetup")#
-				<br />
-				  <a href="#getSetting("TransferApp")#/install/install.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Install.txt">Install.txt</a><br />
-				  <a href="#getSetting("TransferApp")#/install?TB_iframe=true&height=550&width=800" class="thickbox" title="Install Folder">#getresource("openinstall")#</a><br />
-				  <a href="#getSetting("TransferApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-				
-				<!--- Advanced Transfer Sample --->
-				<h3>Advanced Transfer Sample</h3>
-				<p> #getresource("by")# Ernst van der Linden<br />ColdBox-ColdSpring-Transfer<bR>
-				#getresource("needssetup")#
-				<br />
-				  <a href="#getSetting("TransferApp2")#/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Readme.txt">Readme.txt</a><br />
-				</p>
-				
-				<!--- Security Sample --->
-				<h3>Security & Transfer Sample</h3>
-				<p> #getresource("by")# Ernst van der Linden & Luis Majano<br />ColdBox-LightWire-Transfer<bR>
-				#getresource("needssetup")#
-				<br />
-				 <a href="#getSetting("SecurityApp")#/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-				
-				<!--- Illidium --->
-				<h3>Illidium cfc Code Generator</h3>
-				<p> #getresource("by")# Brian Rinaldi<br />#getresource("needssetup")#
-				<br />
-				<font color="##53231d">#getResource("portMessage")#</font>
-				<br />
-				  <a href="#getSetting("cfcGeneratorApp")#/install/readme.txt?TB_iframe=true&height=550&width=800" class="thickbox" title="Readme.txt">Readme.txt</a><br />
-				  <a href="#getSetting("cfcGeneratorApp")#/index.cfm" target="_blank">#getresource("open")# cfcGenerator</a><br />
-				</p>
-
-				
+								
 				</div>
 			</div>
 		</div>

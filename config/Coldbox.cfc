@@ -1,4 +1,4 @@
-component {
+ component {
 
 	// Configure ColdBox Application
 	function configure(){
@@ -26,20 +26,16 @@ component {
 		};
 	
 		// custom settings
-		settings = {
+		settings = {      
 			amazonURL = "http://www.amazon.com/o/registry/7DPYG3RZG3AF",
 			coldboxURL = "http://coldbox.org",
 			blogURL = "http://blog.coldbox.org",
 			coldboxAPIURl = "http://coldbox.org/api",
 			trackerURL = "https://ortussolutions.atlassian.net/browse/COLDBOX",
-			coldboxReaderApp = "applications/ColdBoxReader",
-			cfcGeneratorApp = "applications/cfcGenerator",
-			TransferApp = "applications/TransferSample",
-			TransferApp2 = "applications/TransferSample2",
-			SecurityApp = "applications/securitysample"
+			coldboxReaderApp = "applications/ColdBoxReader"
 		};
 		
-		//Layout Settings
+		//Layout S         ettings
 		layoutSettings = {
 			defaultLayout = "Layout.Main.cfm"
 		};
