@@ -103,22 +103,6 @@
 				  #getresource("nosetup")# <br />
 				  <a href="applications/i18NSample/index.cfm" target="_blank">#getresource("opensample")#</a><br />
 				</p>
-								
-				<!--- CFC Viewer --->
-				<h3>ColdBox cfcViewer Sample</h3>
-				<p> #getresource("by")# Luis Majano
-				  <br />
-				  #getresource("nosetup")# <br />
-				  <a href="applications/cfcViewerSample/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
-				
-				<!--- CF 8 AjAX --->
-				<h3>ColdFusion 8 Ajax Sampler</h3>
-				<p> #getresource("by")# Sana Ullah & Luis Majano
-				  <br />
-				  #getresource("nosetup")# <br />
-				  <a href="applications/CF8Ajax/index.cfm" target="_blank">#getresource("opensample")#</a><br />
-				</p>
 				
 				<!--- SES --->
 				<h3>Coldbox SES</h3>
