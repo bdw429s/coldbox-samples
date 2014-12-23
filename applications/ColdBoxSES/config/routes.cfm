@@ -1,4 +1,4 @@
-<!--- -------------------------------------------
+ <!--- -------------------------------------------
 	Configure your setup here...
 	This file is executed directly in the ses interceptor spawned from Adam Fortuna's ColdCourse.
 	Therefore, ALL methods related to a plugin/interceptor/handler are available, you
@@ -125,13 +125,38 @@ NOTE: The interceptor will create a new setting called: sesBaseURL with this val
 -------------------------------------------- --->
 
 <!--- CUSTOM ROUTES GO HERE (they will be checked in order) --->
-<cfset addRoute(	pattern="/:year-numeric/:month-numeric?/:day-numeric?",
-					handler="SES",
+
+
+<!--- Simple static route --->
+<cfset addRoute(	pattern="/home",
+					handler="general",
+					action="index" )>
+
+<!--- This route has a placeholder in it --->
+<cfset addRoute(	pattern="blog/:entrytitle",
+					handler="general",
+					action="testcase2" )>
+
+<!--- Three placeholders, the last two are optional --->
+<cfset addRoute(	pattern="archive/:year-numeric/:month-numeric?/:day-numeric?",
+					handler="general",
 					action="testcase1" )>
 
-<cfset addRoute(	pattern="blog/:entrytitle",
-					handler="SES",
-					action="testcase2" )>
+<!--- Use regex to match any string ending in 'day' --->
+<cfset addRoute(	pattern="/TGI/regex:(.*day)/",
+					handler="general",
+				 	action="regex" )>
+
+<cfset addRoute(	pattern="printSample",
+					handler="general",
+					action="printSample" )>
+
+<!--- printIt will be added to the request collection when this route is matched --->
+<cfset addRoute(	pattern="printSample/print",
+					handler="general",
+					action="printSample",
+					printIt=true )> 
+
 
 <!--- STANDARD COLDBOX COURSES, DO NOT MODIFY UNLESS YOU DON'T LIKE THEM --->
 <cfset addRoute(":handler/:action?")>
